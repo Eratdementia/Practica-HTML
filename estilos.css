@@ -1,0 +1,478 @@
+/* ==========================================================================
+   HOJA DE ESTILOS EXTERNA CSS3
+   Materia: Programación Web | Instituto Tecnológico de Nuevo León (TecNL)
+   Autor: Alberto Alejandro Vela Castilla
+   No. de Control: 23480285
+   Catedrático: Ing. José Luis Ortega Soria
+   ========================================================================== */
+
+/* 1. Importación de Fuentes Tipográficas Modernas (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* 2. Variables CSS3 para Paleta y Sistema de Diseño */
+:root {
+    --primary: #0284c7;
+    --primary-dark: #0369a1;
+    --primary-light: #e0f2fe;
+    --secondary: #0f172a;
+    --accent: #0d9488;
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --border-focus: #38bdf8;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --transition: all 0.25s ease-in-out;
+}
+
+/* 3. Reseteo y Formato Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 4. Formato de Fuentes y Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    letter-spacing: -0.025em;
+}
+
+h2 {
+    font-size: 1.65rem;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: var(--secondary);
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+}
+
+.text-highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.code-badge {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #f1f5f9;
+    color: #e11d48;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88em;
+}
+
+/* 5. Cabecera y Navegación */
+header {
+    background: linear-gradient(135deg, var(--secondary) 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+}
+
+header .subtitulo {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.85rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+/* 6. Estructura Principal (Contenedor y Divs) */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+/* Layout en Rejilla (Divs / Frames) */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* 7. Tablas con Estilo CSS3 */
+.table-responsive {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+th, td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* 8. Enlaces (Links) */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.btn-link {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #ffffff !important;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-link:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 9. Imágenes */
+.img-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+img.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+img.responsive-img:hover {
+    transform: scale(1.02);
+}
+
+/* 10. Multimedia: Video y Audio */
+.media-box {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 540px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    outline: none;
+}
+
+audio {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 1rem;
+    outline: none;
+}
+
+/* 11. Iframes (Frames) */
+iframe.content-frame {
+    width: 100%;
+    height: 340px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    background-color: #ffffff;
+}
+
+/* 12. Formularios (input text, radio, checkbox, select, button) */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.options-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 0.35rem;
+}
+
+.option-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.92rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--primary);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    grid-column: 1 / -1;
+}
+
+button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0.8rem 1.75rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button[type="submit"] {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(2, 132, 199, 0.3);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(2, 132, 199, 0.4);
+}
+
+button[type="reset"] {
+    background-color: #e2e8f0;
+    color: var(--text-secondary);
+}
+
+button[type="reset"]:hover {
+    background-color: #cbd5e1;
+}
+
+/* 13. Pie de Página (Footer Semántico Requerido) */
+footer {
+    background-color: var(--secondary);
+    color: #f1f5f9;
+    padding: 2.5rem 1.5rem;
+    margin-top: auto;
+    border-top: 4px solid var(--primary);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-info h4 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+}
+
+.footer-info p {
+    color: #94a3b8;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.footer-badge {
+    background-color: rgba(2, 132, 199, 0.15);
+    border: 1px solid var(--primary);
+    color: var(--border-focus);
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+.footer-copy {
+    text-align: center;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #334155;
+    font-size: 0.82rem;
+    color: #64748b;
+}
