@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Página 5 - Formulario de Registro - Vela Castilla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            margin: 25px;
+            color: #1e293b;
+        }
+        h1, h2 {
+            color: #0f172a;
+        }
+        .form-container {
+            background-color: #ffffff;
+            max-width: 650px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #cbd5e1;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #334155;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #94a3b8;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: inline-flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+        }
+        input[type="submit"] {
+            background-color: #0284c7;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #0369a1;
+        }
+        input[type="reset"] {
+            background-color: #e2e8f0;
+            color: #334155;
+        }
+        input[type="reset"]:hover {
+            background-color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>5ta Página HTML: Formularios en HTML</h1>
+    <p>Práctica de controles de entrada de usuario para recolección de datos y envío a servidor.</p>
+
+    <div class="form-container">
+        <h2>Registro de Usuario y Preferencias</h2>
+        
+        <form action="#" method="post">
+            
+            <!-- 1. Solicita el nombre de usuario en una caja de texto -->
+            <div class="form-group">
+                <label for="username">1. Nombre de usuario:</label>
+                <input type="text" id="username" name="username" placeholder="Ingresa tu nombre completo o de usuario" required>
+            </div>
+
+            <!-- 2. Solicita el correo electrónico en una caja de texto -->
+            <div class="form-group">
+                <label for="email">2. Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required>
+            </div>
+
+            <!-- 3. Solicita el municipio en lista desplegable -->
+            <div class="form-group">
+                <label for="municipio">3. Municipio de residencia (Nuevo León):</label>
+                <select id="municipio" name="municipio" required>
+                    <option value="" disabled selected>-- Selecciona tu municipio --</option>
+                    <option value="Guadalupe">Guadalupe</option>
+                    <option value="Monterrey">Monterrey</option>
+                    <option value="San Nicolas">San Nicolás de los Garza</option>
+                    <option value="Apodaca">Apodaca</option>
+                    <option value="San Pedro">San Pedro Garza García</option>
+                    <option value="Santa Catarina">Santa Catarina</option>
+                    <option value="Juarez">Juárez</option>
+                    <option value="Escobedo">General Escobedo</option>
+                </select>
+            </div>
+
+            <!-- 4. Solicita el sexo con radio -->
+            <div class="form-group">
+                <label>4. Sexo:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" id="masculino" name="sexo" value="Masculino" required> Masculino
+                    </label>
+                    <label>
+                        <input type="radio" id="femenino" name="sexo" value="Femenino"> Femenino
+                    </label>
+                    <label>
+                        <input type="radio" id="otro" name="sexo" value="Otro"> Otro
+                    </label>
+                </div>
+            </div>
+
+            <!-- 5. Solicita la ocupación con 3 opciones mediante casillas de verificación -->
+            <div class="form-group">
+                <label>5. Ocupación (puedes marcar varias opciones):</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="estudiante" name="ocupacion" value="Estudiante"> Estudiante
+                    </label>
+                    <label>
+                        <input type="checkbox" id="trabajo" name="ocupacion" value="Trabajo"> Trabajo
+                    </label>
+                    <label>
+                        <input type="checkbox" id="deporte" name="ocupacion" value="Hacer deporte"> Hacer deporte
+                    </label>
+                </div>
+            </div>
+
+            <!-- 6 y 7. Botones de enviar y limpiar formulario -->
+            <div class="button-group">
+                <input type="submit" value="Enviar datos">
+                <input type="reset" value="Limpiar formulario">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Página 3 - Tabla de Países por Visitar - Vela Castilla</title>
+    <!-- Estilos CSS para la tabla según los ejemplos del manual -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            background-color: #f8fafc;
+        }
+        h1, h2 {
+            color: #0f172a;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th {
+            background-color: #0284c7;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+        }
+        td {
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 15px;
+        }
+        tr:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+        img {
+            border-radius: 4px;
+            border: 1px solid #cbd5e1;
+        }
+        a {
+            color: #0284c7;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>3er Página HTML: Tablas en HTML</h1>
+    <h2>Países Internacionales que Deseo Visitar</h2>
+    <p>Tabla organizada en 3 columnas y 5 filas con los destinos turísticos, fotografías oficiales y enlaces a sus portales gubernamentales.</p>
+
+    <!-- Tabla de 3 columnas y 5 renglones de países -->
+    <table>
+        <!-- Fila de Encabezados -->
+        <tr>
+            <th>Nombre del país que quieres visitar</th>
+            <th>Imagen de ese país a visitar</th>
+            <th>Link de la página oficial de ese país</th>
+        </tr>
+
+        <!-- Renglón 1: Japón -->
+        <tr>
+            <td><strong>1. Japón</strong></td>
+            <td>
+                <img src="japon.jpg" alt="Japón - Tokio y Monte Fuji" width="180" height="110">
+            </td>
+            <td>
+                <a href="https://www.japan.travel/es/es/" target="_blank">Visitar Portal Oficial de Turismo de Japón</a>
+            </td>
+        </tr>
+
+        <!-- Renglón 2: Alemania -->
+        <tr>
+            <td><strong>2. Alemania</strong></td>
+            <td>
+                <img src="alemania.jpg" alt="Alemania - Berlín y Castillo de Neuschwanstein" width="180" height="110">
+            </td>
+            <td>
+                <a href="https://www.germany.travel/es/home.html" target="_blank">Visitar Portal Oficial de Turismo de Alemania</a>
+            </td>
+        </tr>
+
+        <!-- Renglón 3: Canadá -->
+        <tr>
+            <td><strong>3. Canadá</strong></td>
+            <td>
+                <img src="canada.jpg" alt="Canadá - Vancouver y Montañas Rocosas" width="180" height="110">
+            </td>
+            <td>
+                <a href="https://esm.destinationcanada.com/" target="_blank">Visitar Portal Oficial de Turismo de Canadá</a>
+            </td>
+        </tr>
+
+        <!-- Renglón 4: Suiza -->
+        <tr>
+            <td><strong>4. Suiza</strong></td>
+            <td>
+                <img src="suiza.jpg" alt="Suiza - Alpes Suizos y Zúrich" width="180" height="110">
+            </td>
+            <td>
+                <a href="https://www.myswitzerland.com/es/" target="_blank">Visitar Portal Oficial de Turismo de Suiza</a>
+            </td>
+        </tr>
+
+        <!-- Renglón 5: Italia -->
+        <tr>
+            <td><strong>5. Italia</strong></td>
+            <td>
+                <img src="italia.jpg" alt="Italia - Roma y Coliseo Romano" width="180" height="110">
+            </td>
+            <td>
+                <a href="https://www.italia.it/es" target="_blank">Visitar Portal Oficial de Turismo de Italia</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

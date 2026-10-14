@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Página 4 - Listas e Iframes - Vela Castilla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        h1, h2, h3 {
+            color: #0f172a;
+        }
+        ol, ul, dl {
+            background-color: #ffffff;
+            padding: 20px 35px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            max-width: 750px;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        dt {
+            font-weight: bold;
+            color: #0284c7;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            color: #475569;
+        }
+        .iframe-container {
+            margin-top: 25px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        iframe {
+            width: 100%;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>4ta Página HTML: Listas e Iframes</h1>
+    <p>Alumno: Alberto Alejandro Vela Castilla • Instituto Tecnológico de Nuevo León</p>
+
+    <hr>
+
+    <!-- Paso 3: Lista ordenada de 4 páginas más útiles para tareas -->
+    <h2>1. Lista Ordenada: Páginas más útiles para realizar tareas</h2>
+    <ol>
+        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> - Comunidad global para resolución de dudas de código y errores de programación.</li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Guías y documentación práctica interactiva sobre HTML, CSS, JavaScript y bases de datos.</li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a> - Repositorio en la nube para control de versiones y colaboración en proyectos de software.</li>
+        <li><a href="https://chatgpt.com/" target="_blank">ChatGPT / Google Gemini</a> - Asistentes de inteligencia artificial para explicación de conceptos teóricos y algoritmos.</li>
+    </ol>
+
+    <!-- Paso 4: Lista desordenada de 4 frutas favoritas -->
+    <h2>2. Lista Desordenada: Mis Frutas Favoritas</h2>
+    <ul>
+        <li>Manzana verde (Crisp y refrescante)</li>
+        <li>Mango ataulfo (Dulce y jugoso)</li>
+        <li>Fresa (Ideal con crema o en licuados)</li>
+        <li>Plátano (Excelente fuente de energía y potasio)</li>
+    </ul>
+
+    <!-- Paso 5: Lista de definiciones de 2 materias favoritas y descripción -->
+    <h2>3. Lista de Definiciones: Mis Materias Favoritas</h2>
+    <dl>
+        <dt>Programación Web</dt>
+        <dd>Me gusta porque brinda las herramientas fundamentales para diseñar e implementar aplicaciones funcionales, intuitivas y modernas accesibles desde cualquier navegador web en el mundo.</dd>
+        
+        <dt>Inteligencia Artificial</dt>
+        <dd>Me fascina porque combina matemáticas, redes neuronales y heurísticas avanzadas para permitir que las computadoras aprendan de patrones y resuelvan problemas complejos de forma automatizada.</dd>
+    </dl>
+
+    <hr>
+
+    <!-- Paso 6 y 7: Dos Iframes (1: Portal del ITNL, 2: index.htm) -->
+    <h2>4. Demostración de Iframes en HTML</h2>
+    
+    <div class="iframe-container">
+        <h3>Iframe 1: Portal Institucional del Instituto Tecnológico de Nuevo León</h3>
+        <p>Incrustación del sitio web del TecNL mediante &lt;iframe&gt;:</p>
+        <iframe src="https://itnuevoleon.tecnm.mx/" height="350" title="Portal Oficial TecNL" style="border: 2px solid #0284c7;"></iframe>
+    </div>
+
+    <div class="iframe-container">
+        <h3>Iframe 2: Primera Página de esta Materia (index.htm)</h3>
+        <p>Incrustación del archivo local <code>index.htm</code> creado en el Ejercicio 1:</p>
+        <iframe src="index.htm" height="200" title="Página 1 local index.htm" style="border: 2px solid #10b981;"></iframe>
+    </div>
+
+</body>
+</html>

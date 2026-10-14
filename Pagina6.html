@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Página 6 - Multimedia y CSS - Vela Castilla</title>
+    <!-- Estilos CSS demostrativos según páginas 41 y 42 del tutorial de W3Schools -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 25px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        h1, h2 {
+            color: #0f172a;
+        }
+        .media-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            max-width: 750px;
+        }
+        /* Ejemplos de CSS según las páginas 41 y 42 del manual */
+        .caja-fondo {
+            background-color: DodgerBlue;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .caja-fondo-secundaria {
+            background-color: Tomato;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .borde-tomato {
+            border: 2px solid Tomato;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+        .borde-dodgerblue {
+            border: 2px solid DodgerBlue;
+            padding: 10px;
+            margin-bottom: 8px;
+        }
+        .borde-violet {
+            border: 2px solid Violet;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>6ta Página HTML: Multimedia y Estilos CSS</h1>
+    <p>Alumno: Alberto Alejandro Vela Castilla • Instituto Tecnológico de Nuevo León</p>
+
+    <hr>
+
+    <!-- Paso 3: Video propio almacenado localmente -->
+    <div class="media-card">
+        <h2>1. Video Local en HTML5 (&lt;video&gt;)</h2>
+        <p>Reproducción de archivo local <code>video.mp4</code> con controles integrados de reproducción y volumen:</p>
+        <video width="480" height="270" controls>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video HTML5.
+        </video>
+    </div>
+
+    <!-- Paso 4: Audio propio almacenado localmente -->
+    <div class="media-card">
+        <h2>2. Audio Local en HTML5 (&lt;audio&gt;)</h2>
+        <p>Reproducción de archivo local <code>audio.mp3</code> con controles estándar de audio:</p>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio HTML5.
+        </audio>
+    </div>
+
+    <!-- Paso 5: Video de YouTube incrustado mediante <iframe> -->
+    <div class="media-card">
+        <h2>3. Video Incrustado de YouTube</h2>
+        <p>Reproducción de video público de YouTube mediante etiqueta &lt;iframe&gt; configurada con parámetros estándar:</p>
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/sHVwwriaT6k" 
+                title="Documental: Límites éticos para la inteligencia artificial - DW" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+
+    <hr>
+
+    <!-- Ejemplos prácticos de CSS según páginas 41 y 42 del manual -->
+    <div class="media-card">
+        <h2>4. Exploración de Ejemplos Básicos de CSS (W3Schools)</h2>
+        
+        <h3>A. Color de Fondo (background-color)</h3>
+        <div class="caja-fondo">
+            <strong>Hola mundo</strong> - Fondo en color DodgerBlue con texto blanco.
+        </div>
+        <div class="caja-fondo-secundaria">
+            Párrafo con fondo Tomato y texto blanco.
+        </div>
+
+        <h3>B. Color de Texto (color)</h3>
+        <p style="color: Tomato; font-weight: bold; font-size: 16px;">Texto estilizado en color Tomato.</p>
+        <p style="color: DodgerBlue; font-weight: bold; font-size: 16px;">Texto estilizado en color DodgerBlue.</p>
+        <p style="color: MediumSeaGreen; font-weight: bold; font-size: 16px;">Texto estilizado en color MediumSeaGreen.</p>
+
+        <h3>C. Color del Borde (border)</h3>
+        <div class="borde-tomato">Caja con borde de 2px solid Tomato</div>
+        <div class="borde-dodgerblue">Caja con borde de 2px solid DodgerBlue</div>
+        <div class="borde-violet">Caja con borde de 2px solid Violet</div>
+    </div>
+
+</body>
+</html>
